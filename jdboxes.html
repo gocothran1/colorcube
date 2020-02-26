@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Color Cube</title>
+    
+    <style>
+
+        #container{
+            width:400px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background-color: RGB(0, 0, 0);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace
+
+        }
+        
+        h2 {
+            font-family: 'Courier New', Courier, monospace
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+            <div class="box" id="one" onmouseover="randomColorOn('one')"></div>
+            <div class="box" id="two" onmouseover="randomColorOn('two')"></div>
+            <div class="box" id="three" onmouseover="randomColorOn('three')"></div>
+            <div class="box" id="four" onmouseover="randomColorOn('four')"></div>
+            <div class="box" id="five" onmouseover="randomColorOn('five')"></div>
+            <div class="box" id="six" onmouseover="randomColorOn('six')"></div>
+            <div class="box" id="seven" onmouseover="randomColorOn('seven')"></div>
+            <div class="box" id="eight" onmouseover="randomColorOn('eight')"></div>
+            <div class="box" id="nine" onmouseover="randomColorOn('nine')"></div>
+            <div class="box" id="ten" onmouseover="randomColorOn('ten')"></div>
+            <div class="box" id="eleven" onmouseover="randomColorOn('eleven')"></div>
+            <div class="box" id="twelve" onmouseover="randomColorOn('twelve')"></div>
+            <div class="box" id="thirteen" onmouseover="randomColorOn('thirteen')"></div>
+            <div class="box" id="fourteen" onmouseover="randomColorOn('fourteen')"></div>
+            <div class="box" id="fifteen" onmouseover="randomColorOn('fifteen')"></div>
+            <div class="box" id="sixteen" onmouseover="randomColorOn('sixteen')"></div>
+            <div class="box" id="seventeen" onmouseover="randomColorOn('seventeen')"></div>
+            <div class="box" id="eighteen" onmouseover="randomColorOn('eighteen')"></div>
+            <div class="box" id="nineteen" onmouseover="randomColorOn('nineteen')"></div>
+            <div class="box" id="twenty" onmouseover="randomColorOn('twenty')"></div>
+
+
+</div>
+    <script>
+        function randomColorOn(id){
+
+            color1 = Math.floor(Math.random() * 255);
+            color2 = Math.floor(Math.random() * 255);
+            color3 = Math.floor(Math.random() * 255);
+            output = "RGB(" + color1 + "," + color2 + "," + color3 + ")";
+        
+          let selectedId = document.getElementById(id);
+          selectedId.style.backgroundColor = output;
+          selectedId.style.boxShadow = `0px 0px 10px 2px RGB(${color1},${color2},${color3})`;
+        }
+
+    </script> 
+    <h1> The Color Cube</h1>
+    <h2> Simply move the cursor over the cube to change its color.</h2>
+</body>
+</html>
+
